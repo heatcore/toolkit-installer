@@ -5,7 +5,7 @@ export PATH=$PATH:/snap/bin
 tag=${1:-"latest"}
 
 mkdir -p /etc/heatcore/ehn-py/
-curl -o /etc/systemd/system/edge-heatcore-nuc-py.service https://gitlab.com/heatcore/toolkit-installer/-/blob/release/edge-heatcore-nuc-py.service
+curl -o /etc/systemd/system/edge-heatcore-nuc-py.service https://github.com/heatcore/toolkit-installer/blob/main/edge-heatcore-nuc-py.service
 sed -i "s/latest/$tag/g" /etc/systemd/system/edge-heatcore-nuc-py.service
 
 docker pull 713613010142.dkr.ecr.ap-southeast-1.amazonaws.com/edge-heatcore-nuc:$tag

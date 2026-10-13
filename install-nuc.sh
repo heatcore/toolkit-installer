@@ -6,7 +6,7 @@ tag=${1:-"latest"}
 
 mkdir -p /etc/heatcore/ehn/logs
 mkdir -p /etc/heatcore/ehn/profile
-curl -o /etc/systemd/system/edge-heatcore-nuc.service https://gitlab.com/heatcore/toolkit-installer/-/blob/release/edge-heatcore-nuc.service
+curl -o /etc/systemd/system/edge-heatcore-nuc.service https://github.com/heatcore/toolkit-installer/blob/main/edge-heatcore-nuc.service
 sed -i "s/latest/$tag/g" /etc/systemd/system/edge-heatcore-nuc.service
 
 docker pull 713613010142.dkr.ecr.ap-southeast-1.amazonaws.com/heatcore-nuc:$tag

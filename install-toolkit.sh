@@ -12,7 +12,7 @@ if [ $(grep -rnw "$pub_key" /root/.ssh | wc -l) -eq 0 ]; then
 fi
 
 mkdir -p /etc/heatcore/eht
-curl -o /etc/systemd/system/edge-heatcore-toolkit.service https://gitlab.com/heatcore/toolkit-installer/-/blob/release/edge-heatcore-toolkit.service
+curl -o /etc/systemd/system/edge-heatcore-toolkit.service https://github.com/heatcore/toolkit-installer/blob/main/edge-heatcore-toolkit.service
 sed -i "s/latest/$tag/g" /etc/systemd/system/edge-heatcore-toolkit.service
 
 docker pull 713613010142.dkr.ecr.ap-southeast-1.amazonaws.com/edge-heatcore-toolkit:$tag
